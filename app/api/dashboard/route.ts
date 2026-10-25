@@ -12,9 +12,8 @@ import { loadAssumptions, loadDataset } from "@/lib/db/load";
 import type { Filter } from "@/lib/calc/types";
 
 export async function GET(request: NextRequest) {
+    const searchParams = request.nextUrl.searchParams;
     try {
-        const searchParams = request.nextUrl.searchParams;
-
         const yearParam = searchParams.get("year");
         const monthParam = searchParams.get("month");
 

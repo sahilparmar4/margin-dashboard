@@ -6,8 +6,8 @@ import { loadAssumptions, loadDataset } from "@/lib/db/load";
 import { searchAndSort } from "@/lib/utils/list-query";
 
 export async function GET(request: NextRequest) {
+  const projectId = request.nextUrl.searchParams.get("projectId");
   try {
-    const projectId = request.nextUrl.searchParams.get("projectId");
 
     const [dataset, assumptions] = await Promise.all([
       loadDataset(),

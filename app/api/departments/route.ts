@@ -10,8 +10,8 @@ import type { Filter } from "@/lib/calc/types";
 import { searchAndSort } from "@/lib/utils/list-query";
 
 export async function GET(request: NextRequest) {
+    const params = request.nextUrl.searchParams;
     try {
-        const params = request.nextUrl.searchParams;
         const department = params.get("department");
 
         const filter: Filter = {};
