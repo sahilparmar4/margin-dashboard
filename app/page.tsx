@@ -712,6 +712,13 @@ export default function Home() {
             >
               Import Data
             </button>
+            <Link
+              href="/settings"
+              className="flex items-center gap-2 rounded-lg border border-slate-200 px-3 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-slate-900"
+            >
+              <Icon name="settings" size={18} />
+              <span>Settings</span>
+            </Link>
             <div className="hidden text-right sm:block">
               <p className="text-sm font-semibold text-slate-800">
                 Financial overview

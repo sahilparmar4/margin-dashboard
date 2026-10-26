@@ -8,6 +8,7 @@ const navItems = [
   { label: "Projects", icon: "projects", href: "/projects" },
   { label: "Employees", icon: "employees", href: "/employees" },
   { label: "Departments", icon: "departments", href: "/departments" },
+  { label: "Settings", icon: "settings", href: "/settings" },
 ];
 
 export default function Sidebar() {
