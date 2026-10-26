@@ -142,7 +142,7 @@ export default function DataTable<T>({
                                         <button
                                             type="button"
                                             onClick={() => handleSort(column.key)}
-                                            className="inline-flex items-center gap-2 transition hover:text-indigo-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+                                            className="inline-flex cursor-pointer items-center gap-2 transition hover:text-indigo-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
                                             aria-label={`Sort by ${column.header}${isActive
                                                     ? sortDirection === "asc"
                                                         ? ", currently ascending"

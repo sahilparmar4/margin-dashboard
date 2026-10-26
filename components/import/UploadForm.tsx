@@ -136,7 +136,7 @@ export default function UploadForm() {
                   event.target.files?.[0],
                 )
               }
-              className="block w-full text-sm"
+              className="block w-full text-sm cursor-pointer"
             />
 
             {files[key] && (
@@ -191,7 +191,7 @@ export default function UploadForm() {
       <button
         type="submit"
         disabled={loading || Object.keys(files).length === 0}
-        className="rounded-lg bg-black px-5 py-2.5 text-white disabled:cursor-not-allowed disabled:opacity-50"
+        className="rounded-lg bg-black px-5 py-2.5 text-white disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
       >
         {loading ? "Importing..." : "Upload Files"}
       </button>

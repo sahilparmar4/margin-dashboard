@@ -445,7 +445,7 @@ export default function SettingsPage() {
                     <button
                       type="button"
                       onClick={addCategory}
-                      className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+                      className="inline-flex cursor-pointer h-11 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
                     >
                       <Icon name="plus" size={17} />
                       Add category
@@ -482,7 +482,7 @@ export default function SettingsPage() {
                               onClick={() => removeCategory(category)}
                               aria-label={`Remove ${category}`}
                               title="Remove category"
-                              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-slate-400 transition hover:bg-rose-50 hover:text-rose-600"
+                              className="flex cursor-pointer h-9 w-9 shrink-0 items-center justify-center rounded-lg text-slate-400 transition hover:bg-rose-50 hover:text-rose-600"
                             >
                               <Icon name="trash" size={17} />
                             </button>
@@ -594,7 +594,7 @@ export default function SettingsPage() {
                 <button
                   type="submit"
                   disabled={saving || loading}
-                  className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-indigo-600 px-5 text-sm font-semibold text-white transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-60"
+                  className="inline-flex h-11 cursor-pointer items-center justify-center gap-2 rounded-xl bg-indigo-600 px-5 text-sm font-semibold text-white transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   <Icon name="check" size={17} />
                   {saving ? "Saving settings..." : "Save settings"}

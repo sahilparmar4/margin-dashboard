@@ -201,7 +201,7 @@ function MetricCard({
   };
 
   return (
-    <article className="rounded-2xl border border-slate-200 bg-white p-5 transition-shadow hover:shadow-md">
+    <article className="rounded-2xl border border-slate-200 bg-white p-5 transition-shadow hover:shadow-md hover:cursor-pointer">
       <div className="flex items-start justify-between gap-3">
         <p className="text-sm font-medium text-slate-500">{title}</p>
         <div className={`rounded-xl p-2.5 ${accents[accent]}`}>
@@ -318,7 +318,7 @@ function TrendChart({ data }: { data: Trend[] }) {
         </div>
       ) : (
         <>
-          <div className="mt-6 w-full overflow-hidden">
+          <div className="mt-6 w-full overflow-hidden cursor-pointer">
             <svg
               viewBox={`0 0 ${width} ${height}`}
               className="h-auto w-full"
@@ -708,7 +708,7 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <button
               onClick={() => setIsImportOpen(true)}
-              className="rounded-lg bg-black px-4 py-2 text-white"
+              className="rounded-lg bg-black px-4 py-2 text-white cursor-pointer"
             >
               Import Data
             </button>
@@ -757,7 +757,7 @@ export default function Home() {
                     setYear(event.target.value);
                     setMonth("");
                   }}
-                  className="h-10 rounded-lg border border-slate-200 bg-white px-3 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                  className="h-10 cursor-pointer rounded-lg border border-slate-200 bg-white px-3 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
                 >
                   <option value="">Latest / default</option>
                   {years.map((item) => (
@@ -775,7 +775,7 @@ export default function Home() {
                 <select
                   value={month}
                   onChange={(event) => setMonth(event.target.value)}
-                  className="h-10 rounded-lg border border-slate-200 bg-white px-3 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                  className="h-10 cursor-pointer rounded-lg border border-slate-200 bg-white px-3 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
                 >
                   <option value="">Full year</option>
                   {monthsForYear.map((item) => (
@@ -790,7 +790,7 @@ export default function Home() {
                 type="button"
                 onClick={applyFilters}
                 disabled={loading}
-                className="h-10 rounded-lg bg-indigo-600 px-4 text-sm font-semibold text-white transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-60"
+                className="h-10 cursor-pointer rounded-lg bg-indigo-600 px-4 text-sm font-semibold text-white transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-60"
               >
                 {loading ? "Loading..." : "Apply filters"}
               </button>
@@ -799,7 +799,7 @@ export default function Home() {
                 type="button"
                 onClick={resetFilters}
                 disabled={loading}
-                className="h-10 rounded-lg px-3 text-sm font-medium text-slate-500 transition hover:bg-slate-100 disabled:opacity-60"
+                className="h-10 cursor-pointer rounded-lg px-3 text-sm font-medium text-slate-500 transition hover:bg-slate-100 disabled:opacity-60"
               >
                 Reset
               </button>
@@ -1031,7 +1031,7 @@ export default function Home() {
                 <button
                   type="button"
                   onClick={() => setIsImportOpen(false)}
-                  className="text-gray-500 hover:text-black"
+                  className="text-gray-500 hover:text-black cursor-pointer"
                   aria-label="Close import dialog"
                 >
                   ✕
